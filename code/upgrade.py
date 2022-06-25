@@ -34,10 +34,10 @@ class Upgrade:
                 self.can_move = False
                 self.selection_time = pygame.time.get_ticks()
 
-        if keys[pygame.K_SPACE]:
-            self.can_move = False
-            self.selection_time = pygame.time.get_ticks()
-            self.item_list[self.selection_index].trigger(self.player)
+            if keys[pygame.K_SPACE]:
+                self.can_move = False
+                self.selection_time = pygame.time.get_ticks()
+                self.item_list[self.selection_index].trigger(self.player)
 
     def selection_cooldown(self):
         if not self.can_move:
